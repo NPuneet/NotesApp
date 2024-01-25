@@ -1,0 +1,117 @@
+:root {
+  --color: white;
+  --font: Roboto, sans-serif;
+}
+.overlay {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background-color: #2f2f2fbf;
+  width: 100vw;
+  justify-content: center;
+  min-height: 100vh;
+  position: absolute;
+}
+.selectionPage {
+  display: flex;
+  background-color: var(--color);
+  height: 11.5rem;
+  z-index: 20;
+  gap: 1rem;
+  width: 25rem;
+  border-radius: 9px;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem 0.6rem 0.6rem 2.4rem;
+}
+.input {
+  border-radius: 100px;
+  border: 1px solid #cccccc;
+  padding: 0 1.2rem;
+}
+
+.choice {
+  display: flex;
+}
+.choiceDiv {
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.choiceDiv > span {
+  margin-right: 1rem;
+}
+.chooseColor1,
+.chooseColor2,
+.chooseColor3,
+.chooseColor4,
+.chooseColor5,
+.chooseColor6 {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.create {
+  width: 6.4rem;
+  height: 1.8rem;
+  background-color: #001f8b;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  align-self: right;
+  margin-left: 17.6rem;
+}
+
+.selection {
+  display: flex;
+  gap: 1.7rem;
+}
+.selectionPage > span {
+  font-family: var(--font);
+  font-size: 20px;
+  font-weight: 600;
+  /* line-height: 25px; */
+  padding-top: 0.9rem;
+  letter-spacing: 0.035em;
+  /* text-align: left; */
+}
+.selection > label {
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.035em;
+  /* text-align: left; */
+}
+.choiceDiv > span {
+  font-family: var(--font);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.035em;
+  text-align: left;
+}
+.chooseColor1 {
+  background: #b38bfa;
+}
+.chooseColor2 {
+  background: #ff79f2;
+}
+.chooseColor3 {
+  background: #43e6fc;
+}
+.chooseColor4 {
+  background: #f19576;
+}
+.chooseColor5 {
+  background: #0047ff;
+}
+.chooseColor6 {
+  background: #6691ff;
+}
