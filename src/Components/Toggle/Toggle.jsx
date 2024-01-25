@@ -1,5 +1,5 @@
 import React from "react";
-import css from "../CreateNew/CreateNew.module.css";
+import css from "./Toggle.module.css";
 
 const CreateNew = () => {
   return (

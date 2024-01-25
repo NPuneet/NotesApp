@@ -1,0 +1,59 @@
+.Notes {
+  /* background: #000; */
+  background: #dae5f5;
+  width: 75vw;
+  height: 100vh;
+}
+.displayArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  text-wrap: wrap;
+  gap: 2.4rem;
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 20px #00000040;
+  border-radius: 9px;
+}
+.pointer {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 2.6rem;
+  cursor: pointer;
+}
+.displayArea {
+  flex-grow: 1;
+  display: flex;
+  gap: 1.5rem;
+  max-height: calc(100dvh - 23rem);
+  flex-direction: column;
+  padding: 1rem 3rem;
+  overflow-y: scroll;
+}
+
+.notes > textarea {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  /* background-color: #f1c75b; */
+  border: none;
+  outline: none;
+  padding-right: 15px;
+  resize: none;
+  font-family: Roboto;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+textarea::-webkit-scrollbar {
+  width: 9px;
+}
+textarea::-webkit-scrollbar-thumb {
+  /* background: #f; */
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+textarea::-webkit-scrollbar-track {
+  /* background: #D9D9D9; */
+  background: #000000a1;
+}

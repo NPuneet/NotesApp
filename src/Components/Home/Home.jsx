@@ -1,45 +1,53 @@
 import React from "react";
-import styles from "../Home/Home.module.css";
+import css from "../Home/Home.module.css";
 import cover from "../../assets/Cover.png";
 import vector from "../../assets/Vector.svg";
 import button from "../../assets/Add.svg";
 import { useState } from "react";
-import CreateNew from "../CreateNew/CreateNew";
+import Toggle from "../Toggle/Toggle";
+import ProfileIcons from "../ProfileIcons/Profile";
+import NoteArea from "../NoteArea/NoteArea";
 
 const Home = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const handleAddClick = () => {
     setIsPopupOpen(!isPopupOpen);
   };
-
   return (
-    <div className={styles.container}>
-      <div className={styles.leftSide}>
+    <div className={css.container}>
+      <div className={css.leftSide}>
         <h3>Pocket Notes</h3>
-        <div className={styles.Button}>
+        <ProfileIcons isActive={isActive} setIsActive={setIsActive} />
+        <div className={css.Button}>
           <img src={button} alt="Button Image" />
-          <p onClick={handleAddClick} className={styles.add}>
+          <p onClick={handleAddClick} className={css.add}>
             +
           </p>
         </div>
       </div>
-      <div className={styles.rightSide}>
-        <div>
-          <img className={styles.cover} src={cover} alt="Cover Image" />
+      {isActive ? (
+        <NoteArea />
+      ) : (
+        <div className={css.rightSide}>
+          <div>
+            <img className={css.cover} src={cover} alt="Cover Image" />
+          </div>
+          <div className={css.content}>
+            <h1>Pocket Notes</h1>
+            <p>
+              Send and receive messages without keeping your phone online.{" "}
+              <br /> Use Pocket Notes on up to 4 linked devices and 1 mobile
+              phone
+            </p>
+          </div>
+          <div className={css.Encrypted}>
+            <img src={vector} alt="Vector Image" />{" "}
+            <span>end-to-end encrypted</span>
+          </div>
         </div>
-        <div className={styles.content}>
-          <h1>Pocket Notes</h1>
-          <p>
-            Send and receive messages without keeping your phone online. <br />{" "}
-            Use Pocket Notes on up to 4 linked devices and 1 mobile phone
-          </p>
-        </div>
-        <div className={styles.Encrypted}>
-          <img src={vector} alt="Vector Image" />{" "}
-          <span>end-to-end encrypted</span>
-        </div>
-      </div>
-      {isPopupOpen ? <CreateNew /> : <></>}
+      )}
+      {isPopupOpen ? <Toggle /> : <></>}
     </div>
   );
 };
