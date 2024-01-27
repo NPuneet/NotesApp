@@ -1,7 +1,4 @@
 .profile {
-  /* height: 3.5vh; */
-  /* background: #2f2f2f2b; */
-  /* width: 25vw; */
   gap: 2rem;
   display: flex;
   align-content: center;
@@ -23,12 +20,7 @@
   height: 3.3rem;
   width: 3.2rem;
   background-color: aqua;
-
-  /* position: fixed; */
 }
 .selected > p {
   font-size: large;
 }
-/* .gg{
-    color: aqua;
-  } */

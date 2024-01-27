@@ -4,6 +4,7 @@ import css from "../ProfileIcons/Profile.module.css";
 
 const ProfileIcons = ({ isActive, setIsActive }) => {
   return (
+    
     <div
       className={`${css.profile} ${isActive === true ? css.activeProfile : ""}`}
       onClick={() => setIsActive(!isActive)}
