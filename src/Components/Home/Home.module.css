@@ -13,7 +13,13 @@ body {
   font-size: 35px;
   width: 25vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: calc(100dvh - 0.1rem);
+  overflow: scroll;
 }
+
 .leftSide > h3 {
   padding: 3.3rem;
   position: sticky;
@@ -70,16 +76,30 @@ body {
 .content > p {
   font-family: Roboto, sans-serif;
   margin-bottom: 9rem;
+  font-weight: 500;
 }
 .content > h1 {
   font-family: Roboto, sans-serif;
   font-size: 3rem;
+  font-weight: 600;
 }
 .Encrypted {
   position: fixed;
   bottom: 1rem;
+  font-weight: 400;
 }
-.body{
+.body {
   display: flex;
   flex-direction: column;
+}
+.leftSide::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leftSide::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #ffffff;
+}
+.leftSide::-webkit-scrollbar-track {
+  background: #d9d9d9;
 }

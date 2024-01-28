@@ -21,9 +21,11 @@ const Home = () => {
   return (
     <div className={css.container}>
       <div className={css.leftSide}>
-        <h3>Pocket Notes</h3>
-        <div className={css.body}> 
-        <ProfileIcons isActive={isActive} setIsActive={setIsActive} />
+        <div>
+          <h3>Pocket Notes</h3>
+        </div>  
+        <div className={css.body}>
+          <ProfileIcons isActive={isActive} setIsActive={setIsActive} />
         </div>
         <div className={css.Button}>
           <img src={button} alt="Button Image" />

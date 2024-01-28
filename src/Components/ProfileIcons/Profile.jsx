@@ -8,33 +8,32 @@ const ProfileIcons = ({ isActive, setIsActive }) => {
   const [group, setGroup] = useState([]);
   // console.log(nameValue, selectedColorValue);
   useEffect(() => {
-    
-      const localStorageData = localStorage.getItem("Profile");
-      const parsedData = JSON.parse(localStorageData);
-      console.log(parsedData);
-      setGroup(parsedData || []);
-  
+    const localStorageData = localStorage.getItem("Profile");
+    const parsedData = JSON.parse(localStorageData);
+    console.log(parsedData);
+    setGroup(parsedData || []);
   }, [groupInstances]);
-  
+
   return (
     <>
-      {group.length > 0 && group.map((instance, i) => (
-        <div
-          key={i}
-          className={`${css.profile} ${
-            isActive === true ? css.activeProfile : ""
-          }`}
-          onClick={() => setIsActive(!isActive)}
-        >
+      {group.length > 0 &&
+        group.map((instance, i) => (
           <div
-            className={css.initials}
-            style={{ backgroundColor: instance.color }}
+            key={i}
+            className={`${css.profile} ${
+              isActive === true ? css.activeProfile : ""
+            }`}
+            onClick={() => setIsActive(!isActive)}
           >
-            {/* <p></p> */}
+            <div
+              className={css.initials}
+              style={{ backgroundColor: instance.color }}
+            >
+              {/* <p></p> */}
+            </div>
+            <p className={css.name}>{instance.name}</p>
           </div>
-          <p>{instance.name}</p>
-        </div>
-      ))}
+        ))}
     </>
   );
 };
