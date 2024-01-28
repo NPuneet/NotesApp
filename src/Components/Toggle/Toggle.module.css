@@ -14,7 +14,7 @@
 }
 .selectionPage {
   display: flex;
-  background-color: var(--color);
+  background-color: #ffffff;
   height: 11.5rem;
   z-index: 20;
   gap: 1rem;
@@ -114,4 +114,7 @@
 }
 .chooseColor6 {
   background: #6691ff;
+}
+.active {
+  border: 2.5px solid #000000;
 }

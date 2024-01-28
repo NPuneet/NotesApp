@@ -27,7 +27,6 @@ body {
 .Button {
   position: fixed;
   width: 5rem;
-  /* top: 37rem; */
   bottom: 37px;
   left: 18rem;
   cursor: pointer;
@@ -79,4 +78,8 @@ body {
 .Encrypted {
   position: fixed;
   bottom: 1rem;
+}
+.body{
+  display: flex;
+  flex-direction: column;
 }

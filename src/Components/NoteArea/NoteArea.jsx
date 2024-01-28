@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import css from "../NoteArea/NoteArea.module.css";
 import pointer from "../../assets/pointer.svg";
+import Context from "../utils/Context";
 
-const NoteArea = () => {
+const NoteArea = ({ value }) => {
+  const { nameValue } = useContext(Context);
   return (
     <div className={css.Notes}>
       <div className={css.header}>
@@ -11,9 +13,7 @@ const NoteArea = () => {
       </div>
       <div className={css.main}>
         <div className={css.displayArea}>
-          <p>
-            Another productive way to use this tool to begin a daily writing
-          </p>
+          <p>{nameValue}</p>
           <p>time</p>
         </div>
         <div className={css.displayArea}>
