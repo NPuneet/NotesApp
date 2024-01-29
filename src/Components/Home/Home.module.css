@@ -16,7 +16,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  overflow: scroll;
 }
 
 /* Updated selector to directly target h3 */
@@ -95,15 +94,16 @@ body {
   flex-direction: column;
   gap: .5rem;
   box-sizing: border-box;
+  overflow: scroll;
 }
-.leftSide::-webkit-scrollbar {
+.body::-webkit-scrollbar {
   width: 8px;
 }
 
-.leftSide::-webkit-scrollbar-thumb {
+.body::-webkit-scrollbar-thumb {
   border-radius: 15px;
   background: #d9d9d9;
 }
-.leftSide::-webkit-scrollbar-track {
+.body::-webkit-scrollbar-track {
   background: #ffff;
 }
