@@ -11,6 +11,7 @@ import NoteArea from "../NoteArea/NoteArea";
 const Home = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [data, setData] = useState([]);
   const handleAddClick = () => {
     setIsPopupOpen(!isPopupOpen);
   };
@@ -18,14 +19,19 @@ const Home = () => {
   const handleClose = () => {
     setIsPopupOpen(false);
   };
+
   return (
     <div className={css.container}>
       <div className={css.leftSide}>
         <div>
           <h3>Pocket Notes</h3>
-        </div>  
+        </div>
         <div className={css.body}>
-          <ProfileIcons isActive={isActive} setIsActive={setIsActive} />
+          <ProfileIcons
+            isActive={isActive}
+            setIsActive={setIsActive}
+            setData={setData}
+          />
         </div>
         <div className={css.Button}>
           <img src={button} alt="Button Image" />
@@ -35,7 +41,7 @@ const Home = () => {
         </div>
       </div>
       {isActive ? (
-        <NoteArea />
+        <NoteArea data={data} />
       ) : (
         <div className={css.rightSide}>
           <div>

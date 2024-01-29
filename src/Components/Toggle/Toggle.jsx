@@ -1,18 +1,11 @@
 import React, { useContext, useState } from "react";
 import css from "./Toggle.module.css";
-// import Context from "../utils/Context";
- import Context from "../utils/Context";
-
+import Context from "../utils/Context";
 
 const Toggle = ({ handleClose }) => {
-  // const { setValue, setColor } = useContext(Context);
   const { createGroupInstance, groupInstances } = useContext(Context);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedText, setSelectedText] = useState("");
-
-  // const selectColor = (color) => {
-  //   setSelectedColor(color);
-  // };
   const onSubmit = () => {
     if (selectedColor && selectedText) {
       const newGroup = {
@@ -21,7 +14,6 @@ const Toggle = ({ handleClose }) => {
       };
       createGroupInstance(newGroup);
       handleClose();
-  
     }
     return;
   };

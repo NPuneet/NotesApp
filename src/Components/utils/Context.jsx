@@ -1,7 +1,4 @@
 import { createContext } from "react";
 
-const Context = createContext({
-  nameValue: "",
-  selectedColorValue: "",
-});
+const Context = createContext();
 export default Context;
