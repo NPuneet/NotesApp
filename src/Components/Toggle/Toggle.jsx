@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import css from "./Toggle.module.css";
 import Context from "../utils/Context";
 
@@ -6,6 +6,7 @@ const Toggle = ({ handleClose }) => {
   const { createGroupInstance, groupInstances } = useContext(Context);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedText, setSelectedText] = useState("");
+  const refs = useRef(null);
   const onSubmit = () => {
     if (selectedColor && selectedText) {
       const newGroup = {
@@ -17,9 +18,20 @@ const Toggle = ({ handleClose }) => {
     }
     return;
   };
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick, true);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick, true);
+    };
+  }, []);
+  const handleOutsideClick = (e) => {
+    if (! refs.current.contains(e.target)) {
+      handleClose();
+    }
+  };
   return (
     <div className={css.overlay}>
-      <div className={css.selectionPage}>
+      <div className={css.selectionPage} ref={refs}>
         <span>Create new group</span>
         <div className={css.selection}>
           <label>Group Name</label>

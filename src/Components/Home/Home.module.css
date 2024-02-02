@@ -4,6 +4,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 .container {
   display: flex;
 }
@@ -18,7 +19,6 @@ body {
   gap: 0.4rem;
 }
 
-/* Updated selector to directly target h3 */
 .leftSide h3 {
   padding: 3.3rem;
   position: sticky;
@@ -30,7 +30,7 @@ body {
   margin: 0;
   top: 0;
 }
-  
+
 .Button {
   position: fixed;
   width: 5rem;
@@ -92,7 +92,7 @@ body {
 .body {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
   box-sizing: border-box;
   overflow: scroll;
 }
@@ -106,4 +106,14 @@ body {
 }
 .body::-webkit-scrollbar-track {
   background: #ffff;
+}
+@media only screen and (max-width: 480px) {
+  /* Styles for screens with a width up to 480 pixels (smartphone size) */
+  .leftSide {
+    width: 100vw;
+    height: 100vh;
+  }
+  .rightSide {
+    display: none;
+  }
 }
