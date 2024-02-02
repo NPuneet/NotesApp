@@ -19,7 +19,7 @@ body {
   gap: 0.4rem;
 }
 
-.leftSide h3 {
+.leftSide > h3 {
   padding: 3.3rem;
   position: sticky;
   font-family: Roboto, sans-serif;
@@ -110,10 +110,13 @@ body {
 @media only screen and (max-width: 480px) {
   /* Styles for screens with a width up to 480 pixels (smartphone size) */
   .leftSide {
-    width: 100vw;
+    width: 100vw ; 
     height: 100vh;
   }
   .rightSide {
-    display: none;
+    display: none;  
+  }
+  .container{
+    display: block  ;
   }
 }

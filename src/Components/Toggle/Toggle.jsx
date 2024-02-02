@@ -25,7 +25,7 @@ const Toggle = ({ handleClose }) => {
     };
   }, []);
   const handleOutsideClick = (e) => {
-    if (! refs.current.contains(e.target)) {
+    if (!refs.current.contains(e.target)) {
       handleClose();
     }
   };
