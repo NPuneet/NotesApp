@@ -6,8 +6,8 @@ import filledPointer from "../../assets/filledPointer.svg";
 import arrow from "../../assets/arrow.svg";
 import Context from "../utils/Context";
 
-const NoteArea = ({ data , setIsActive, isActive }) => {
-  console.log(isActive)
+const NoteArea = ({ data, setIsActive, isActive }) => {
+  console.log(isActive);
   const { saveMessage, groupInstances } = useContext(Context);
   const [group, setGroup] = useState("");
 
@@ -75,7 +75,12 @@ const NoteArea = ({ data , setIsActive, isActive }) => {
           <span>{data.initials}</span>
         </div>
         <p>{data.name}</p>
-        <img src={arrow} alt="" className={css.arrow} onClick={() => setIsActive(!true)} />
+        <img
+          src={arrow}
+          alt=""
+          className={css.arrow}
+          onClick={() => setIsActive(!true)}
+        />
       </div>
       <div className={css.main}>
         {displayMessages.map((message, index) => (

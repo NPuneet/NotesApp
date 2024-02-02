@@ -8,7 +8,11 @@ const Toggle = ({ handleClose }) => {
   const [selectedText, setSelectedText] = useState("");
   const refs = useRef(null);
   const onSubmit = () => {
-    if (selectedColor && selectedText) {
+    const existingGroup = groupInstances.find(
+      (group) => group.color === selectedColor && group.name === selectedText
+    );
+
+    if (!existingGroup) {
       const newGroup = {
         name: selectedText,
         color: selectedColor,
@@ -16,7 +20,6 @@ const Toggle = ({ handleClose }) => {
       createGroupInstance(newGroup);
       handleClose();
     }
-    return;
   };
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick, true);
