@@ -38,7 +38,7 @@ textarea {
   resize: none;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
-  padding: 1.5rem 3.5rem 1.5rem 1.5rem; 
+  padding: 1.5rem 3.5rem 1.5rem 1.5rem;
   border: none;
   outline: none;
 }
@@ -82,12 +82,15 @@ textarea::-webkit-scrollbar-track {
   background: #dae5f5;
 }
 
+.arrow {
+  display: none;
+}
 .header {
   display: flex;
   align-items: center;
   min-height: 5.2rem;
   gap: 2.4rem;
-  padding: 0 2.4rem;
+  padding: 0 3.4rem;
   background-color: #001f8b;
   /* margin-bottom: .5rem; */
 }
@@ -139,16 +142,19 @@ textarea::-webkit-scrollbar-track {
   letter-spacing: 0.36px;
 }
 @media only screen and (max-width: 480px) {
-.Notes{
-  width: 100vw;
-  position: absolute;
-  top: 0;
-
-}
-.footer{
-  width: 90%;
-  position: fixed;
-  bottom: 0;
-}
-  
+  .Notes {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+  }
+  .footer {
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+  }
+  .arrow {
+    display: block;
+    position: fixed;
+    left: 1rem;
+  }
 }

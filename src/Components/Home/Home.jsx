@@ -12,6 +12,7 @@ const Home = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [data, setData] = useState([]);
+
   const handleAddClick = () => {
     setIsPopupOpen(!isPopupOpen);
   };
@@ -41,7 +42,7 @@ const Home = () => {
         </div>
       </div>
       {isActive ? (
-        <NoteArea data={data} />
+        <NoteArea data={data} setIsActive={setIsActive} isActive={isActive} />
       ) : (
         <div className={css.rightSide}>
           <div>
