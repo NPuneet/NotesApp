@@ -13,12 +13,14 @@ const Toggle = ({ handleClose }) => {
     );
 
     if (!existingGroup) {
+      if (selectedColor && selectedText) {
       const newGroup = {
         name: selectedText,
         color: selectedColor,
       };
       createGroupInstance(newGroup);
       handleClose();
+    }
     }
   };
   useEffect(() => {
